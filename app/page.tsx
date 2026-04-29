@@ -12,19 +12,19 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section */}
+      {/* Hero Section - Real Material Lead */}
       <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
             
-            {/* 1. Quartz Image - Rugged Industrial Frame */}
+            {/* 1. Quartz Image (Image 4) - Rugged Industrial Frame */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
               <div className="relative aspect-[16/8.5] lg:aspect-square overflow-hidden rounded-xl border border-[#E6E6E6] bg-[#F8F9FA] shadow-lg">
                 <Image 
-                  src="/images/lumps.png" 
-                  alt="Raw Mineral Sample - White Quartz Lumps" 
+                  src="/images/hero_final.png" 
+                  alt="Authentic Stockpile - SSR White Quartz Lumps" 
                   fill 
-                  className="object-cover"
+                  className="object-cover brightness-110 saturate-90 contrast-[1.05]"
                   priority
                 />
               </div>
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Material Specifications Section */}
+      {/* Material Specifications Section - Close-Up Detail (Image 2) */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-[#F8F9FA] relative border-y border-[#E6E6E6]" id="products">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
@@ -91,13 +91,16 @@ export default function Home() {
               </div>
             </div>
 
+            {/* Technical Detail Image (Image 2) - Zoomed to remove fingers */}
             <div className="hidden lg:flex relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm order-2">
-              <Image 
-                src="/images/hero.png" 
-                alt="Industrial Supply Infrastructure" 
-                fill 
-                className="object-cover"
-              />
+              <div className="relative w-full h-full scale-[1.3] brightness-110 saturate-90 translate-y-[-10%]">
+                <Image 
+                  src="/images/product_final.png" 
+                  alt="Industrial White Quartz Mineral Detail" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -139,7 +142,7 @@ export default function Home() {
                 <p className="text-sm text-[#111111] font-medium max-w-sm leading-relaxed mb-8">{item.desc}</p>
                 <div className="mt-auto pt-6 border-t border-black/5 flex flex-col">
                   <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest mb-1">Primary Use</span>
-                  <span className="text-[0.65rem] font-medium uppercase text-black">{item.use}</span>
+                  <span className="text-[0.65rem] font-bold uppercase text-black">{item.use}</span>
                 </div>
               </div>
               
@@ -148,6 +151,37 @@ export default function Home() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Material Integrity (Image 1) */}
+      <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white">
+        <div className="container-wide">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-sm">
+              <div className="relative w-full h-full scale-[1.5] brightness-125 saturate-75">
+                <Image 
+                  src="/images/about_final.png" 
+                  alt="Raw Mineral Analysis" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <span className="text-label mb-4 block">Quality Assurance</span>
+              <h2 className="h-section text-[#111111] mb-6">Material Integrity</h2>
+              <p className="text-[#111111] font-medium leading-relaxed max-w-lg mb-8">
+                Our raw white quartz lumps undergo strict inspection to ensure consistency in industrial grade and mineral purity. Directly sourced from verified quarry sites.
+              </p>
+              <div className="flex items-center gap-6">
+                <div className="w-12 h-12 rounded-full bg-[#F8F9FA] flex items-center justify-center border border-[#E6E6E6]">
+                  <span className="text-[0.7rem] font-bold text-black">99%</span>
+                </div>
+                <span className="text-[0.65rem] font-black uppercase tracking-widest text-gray-500">Mineral Purity Compliance</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
