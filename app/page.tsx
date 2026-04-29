@@ -12,19 +12,19 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Real Material Lead */}
+      {/* Hero Section - Pure Material Visibility */}
       <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* 1. Quartz Image (Image 4) - Rugged Industrial Frame */}
-            <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
-              <div className="relative aspect-[16/8.5] lg:aspect-square overflow-hidden rounded-xl border border-[#E6E6E6] bg-[#F8F9FA] shadow-lg">
+            {/* 1. Quartz Image (Image 4) - Stockpile Lead */}
+            <div className="order-1 lg:order-2 lg:col-span-5 relative">
+              <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-2xl">
                 <Image 
                   src="/images/hero_final.png" 
                   alt="Authentic Stockpile - SSR White Quartz Lumps" 
                   fill 
-                  className="object-cover brightness-110 saturate-90 contrast-[1.05]"
+                  className="object-cover"
                   priority
                 />
               </div>
@@ -33,9 +33,9 @@ export default function Home() {
             {/* 2. Text Content */}
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col">
               <div className="space-y-6 lg:space-y-10">
-                <div className="hidden lg:flex items-center gap-4">
+                <div className="flex items-center gap-4">
                   <div className="w-10 h-px bg-black"></div>
-                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-medium tracking-[0.4em] text-black">Raw White Quartz Supply</span>
+                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">Raw White Quartz Supply</span>
                 </div>
                 
                 <h1 className="text-[2.25rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
@@ -49,7 +49,7 @@ export default function Home() {
                   
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !bg-[#111111] !text-white !py-3.5 lg:!py-5">Request Quote</Link>
-                    <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-medium !py-3.5 lg:!py-5">Material Details</Link>
+                    <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-bold !py-3.5 lg:!py-5">Material Details</Link>
                   </div>
                 </div>
               </div>
@@ -59,11 +59,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Material Specifications Section - Close-Up Detail (Image 2) */}
+      {/* Material Specifications Section - Crystalline Detail (Image 2) */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-[#F8F9FA] relative border-y border-[#E6E6E6]" id="products">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            <div className="space-y-8 lg:space-y-12 order-1">
+            <div className="space-y-8 lg:space-y-12 order-2 lg:order-1">
               <div>
                 <span className="text-label mb-4 block">Material Details</span>
                 <h2 className="h-section text-[#111111] mb-6">Industrial Grade <br/>White Quartz Lumps</h2>
@@ -81,7 +81,7 @@ export default function Home() {
                 ].map((spec, i) => (
                   <div key={i} className="border-l-2 border-black pl-6 py-1">
                     <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-1">{spec.label}</span>
-                    <span className="text-sm font-medium text-[#111111]">{spec.val}</span>
+                    <span className="text-sm font-bold text-[#111111]">{spec.val}</span>
                   </div>
                 ))}
               </div>
@@ -91,22 +91,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Technical Detail Image (Image 2) - Zoomed to remove fingers */}
-            <div className="hidden lg:flex relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm order-2">
-              <div className="relative w-full h-full scale-[1.3] brightness-110 saturate-90 translate-y-[-10%]">
-                <Image 
-                  src="/images/product_final.png" 
-                  alt="Industrial White Quartz Mineral Detail" 
-                  fill 
-                  className="object-cover"
-                />
-              </div>
+            {/* Product Detail Image - Now Visible on All Screens */}
+            <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-lg">
+              <Image 
+                src="/images/product_final.png" 
+                alt="Industrial White Quartz Mineral Detail" 
+                fill 
+                className="object-contain p-4"
+              />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industrial Applications */}
+      {/* Industrial Applications - Clean Industry Links */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white overflow-hidden" id="applications">
         <div className="container-wide mb-12 lg:mb-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
@@ -146,27 +144,25 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="absolute right-0 top-0 bottom-0 w-0 group-hover:w-1/3 transition-all duration-1000 ease-industrial opacity-0 group-hover:opacity-10 hidden lg:block">
-                <Image src={item.img} alt={item.title} fill className="object-cover grayscale" />
+              <div className="absolute right-0 top-0 bottom-0 w-0 group-hover:w-1/3 transition-all duration-1000 ease-industrial opacity-0 group-hover:opacity-100 hidden lg:block">
+                <Image src={item.img} alt={item.title} fill className="object-cover" />
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* Material Integrity (Image 1) */}
+      {/* Material Integrity (Image 1) - Macro Analysis Visibility */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-sm">
-              <div className="relative w-full h-full scale-[1.5] brightness-125 saturate-75">
-                <Image 
-                  src="/images/about_final.png" 
-                  alt="Raw Mineral Analysis" 
-                  fill 
-                  className="object-cover"
-                />
-              </div>
+            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-xl bg-white p-4">
+              <Image 
+                src="/images/about_final.png" 
+                alt="Raw Mineral Analysis - SSR Quartz Integrity" 
+                fill 
+                className="object-contain"
+              />
             </div>
             <div>
               <span className="text-label mb-4 block">Quality Assurance</span>
