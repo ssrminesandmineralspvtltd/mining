@@ -54,20 +54,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Material Specifications Section */}
+      {/* Material Specifications Section - Text First Flow */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-[#F8F9FA] relative border-y border-[#E6E6E6]" id="products">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            {/* Hidden on mobile to avoid duplication with Hero image */}
-            <div className="hidden lg:block relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm">
-              <Image 
-                src="/images/lumps.png" 
-                alt="White Quartz Lumps Technical Detail" 
-                fill 
-                className="object-cover"
-              />
-            </div>
-            <div className="space-y-8 lg:space-y-12">
+            {/* Content Column - Swapped to top for mobile/left for desktop */}
+            <div className="space-y-8 lg:space-y-12 order-1">
               <div>
                 <span className="text-label mb-4 block">Material Details</span>
                 <h2 className="h-section text-[#111111] mb-6">Industrial Grade <br/>White Quartz Lumps</h2>
@@ -93,6 +85,16 @@ export default function Home() {
               <div className="pt-6">
                 <Link href="/contact" className="btn-primary !bg-[#111111] !w-full lg:!w-auto text-center">Inquire for Data Sheet</Link>
               </div>
+            </div>
+
+            {/* Image Column - Hidden on mobile, appearing on the right for desktop */}
+            <div className="hidden lg:flex relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm order-2">
+              <Image 
+                src="/images/lumps.png" 
+                alt="White Quartz Lumps Technical Detail" 
+                fill 
+                className="object-cover"
+              />
             </div>
           </div>
         </div>
@@ -121,7 +123,7 @@ export default function Home() {
           ].map((item, idx) => (
             <div 
               key={idx} 
-              className={`${item.span} bg-white relative group border border-[#E6E6E6] lg:border-none rounded-xl lg:rounded-none overflow-hidden`}
+              className={`${item.span} bg-white relative group border-x border-b border-[#E6E6E6] lg:border-none rounded-b-xl lg:rounded-none overflow-hidden first:border-t first:rounded-t-xl`}
             >
               <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full bg-white">
                 <div className="flex justify-between items-center mb-10">
