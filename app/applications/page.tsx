@@ -1,8 +1,45 @@
 "use client";
 import React from 'react';
-import Image from 'next/image';
 import { motion } from 'framer-motion';
-import AppCard from '@/components/AppCard';
+import Link from 'next/link';
+
+const sectors = [
+  {
+    num: "01",
+    title: "Semiconductors",
+    desc: "Quartz raw material for high-purity silicon processing and advanced electronics supply chains.",
+    use: "Silicon Feed Material",
+    note: "Raw quartz input — further processing required for semiconductor-grade refinement."
+  },
+  {
+    num: "02",
+    title: "Solar",
+    desc: "Quartz raw material for solar glass and silicon-based energy manufacturing applications.",
+    use: "Solar Grade Input",
+    note: "Raw mineral supply for downstream solar manufacturing processes."
+  },
+  {
+    num: "03",
+    title: "Glass Manufacturing",
+    desc: "Raw quartz material supporting clear, high-performance industrial glass production.",
+    use: "Material Input",
+    note: "SiO2 source for glass melting — architectural, automotive, and container applications."
+  },
+  {
+    num: "04",
+    title: "Ceramic Industry",
+    desc: "Quartz supply for ceramic strength, structure, and industrial-grade material formulations.",
+    use: "Structural Input",
+    note: "Used in tiles, sanitaryware, and industrial ceramic formulations."
+  },
+  {
+    num: "05",
+    title: "Construction",
+    desc: "Quartz mineral input for aggregates, engineered materials, and mineral-based construction applications.",
+    use: "Aggregate Supply",
+    note: "Premium aggregates for architectural concrete and mineral-based finishes."
+  }
+];
 
 const ApplicationsPage = () => {
   return (
@@ -18,46 +55,73 @@ const ApplicationsPage = () => {
             <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-gray-400 mb-4 block">Sector Expertise</span>
             <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">Industrial Applications</h1>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              Our raw white quartz lumps serve as critical raw material inputs for various high-precision manufacturing industries.
+              Quarry-origin raw white quartz supply for key industrial sectors. Specifications and bulk supply details shared on request.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* Applications Grid */}
+      {/* Applications Grid — 5 Sectors */}
       <section className="py-24">
-        <div className="max-w-[1440px] mx-auto px-[5%] grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-20">
-          <AppCard 
-            title="Glass Manufacturing"
-            image="/images/glass.png"
-            description="High-purity quartz is the primary source of SiO2 for glass melting. Our bright white lumps ensure optimal clarity for architectural, automotive, and container glass production where low iron content is vital."
-          />
-          <AppCard 
-            title="Ceramic & Sanitaryware"
-            image="/images/ceramic.png"
-            description="In the ceramic sector, our quartz lumps provide the necessary structural strength and thermal stability. Used extensively in the production of high-end tiles, sanitaryware, and tableware."
-          />
-          <AppCard 
-            title="Construction & Architecture"
-            image="/images/construction.png"
-            description="Our raw lumps are used as premium aggregates for architectural concrete, exposed aggregate finishes, and decorative landscaping where a pure white mineral appearance is required."
-          />
-          <AppCard 
-            title="Engineered Stone & Industrial Minerals"
-            image="/images/stone.png"
-            description="The luxury quartz surface industry relies on consistent raw lumps for crushing and processing. Our material provides the aesthetic and physical foundation for high-performance engineered stone slabs."
-          />
+        <div className="max-w-[1440px] mx-auto px-[5%]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E6E6E6] border border-[#E6E6E6]">
+            {sectors.map((sector, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.08 }}
+                className="bg-white group relative overflow-hidden"
+              >
+                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg,transparent,transparent 39px,#000 39px,#000 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#000 39px,#000 40px)' }}></div>
+                <div className="p-10 lg:p-12 flex flex-col h-full border-l-2 border-transparent group-hover:border-black transition-all duration-500 min-h-[300px]">
+                  <div className="flex justify-between items-center mb-8">
+                    <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-400">Sector {sector.num}</span>
+                    <div className="w-8 h-px bg-black/10"></div>
+                  </div>
+                  <h2 className="text-xl font-bold uppercase tracking-tight mb-4 text-[#111111]">{sector.title}</h2>
+                  <p className="text-sm text-[#111111] font-medium leading-relaxed mb-6 flex-1">{sector.desc}</p>
+                  <div className="pt-5 border-t border-black/5">
+                    <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest block mb-1">Primary Use</span>
+                    <span className="text-[0.65rem] font-bold uppercase text-black">{sector.use}</span>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+            {/* 6th cell — CTA to balance the 3-col grid */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.45 }}
+              className="bg-[#111111] group relative overflow-hidden"
+            >
+              <div className="p-10 lg:p-12 flex flex-col h-full justify-between min-h-[300px]">
+                <div>
+                  <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-500 block mb-8">Bulk Inquiry</span>
+                  <h2 className="text-xl font-bold uppercase tracking-tight mb-4 text-white">Other Requirements?</h2>
+                  <p className="text-sm text-gray-400 font-medium leading-relaxed">
+                    If your sector has specific mineral requirements, connect with our team for direct supply alignment.
+                  </p>
+                </div>
+                <Link href="/contact" className="mt-8 inline-block border border-white text-white text-[0.65rem] font-bold uppercase tracking-widest px-6 py-3 hover:bg-white hover:text-black transition-all duration-300">
+                  Contact Us →
+                </Link>
+              </div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 bg-[#F8F9FA]">
+      <section className="py-24 bg-[#F8F9FA] border-t border-[#E6E6E6]">
         <div className="max-w-[1440px] mx-auto px-[5%] text-center">
           <h2 className="text-3xl font-medium mb-8">Specific Industry Requirement?</h2>
           <p className="text-gray-500 mb-10 max-w-xl mx-auto">
-            If your application requires specific mineral characteristics, connect with our technical team to discuss bulk supply alignment.
+            Connect with our quarry supply team to discuss bulk material requirements, specifications, and export logistics.
           </p>
-          <a href="/contact" className="btn-primary inline-block">Consult with Us</a>
+          <Link href="/contact" className="btn-primary inline-block">Get in Touch</Link>
         </div>
       </section>
     </div>

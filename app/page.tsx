@@ -44,7 +44,7 @@ export default function Home() {
                 
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
                   <p className="text-base lg:text-lg text-[#111111] font-medium max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
-                    Quarry-source white quartz lumps supplied directly to industrial buyers and bulk procurement chains.
+                    Supplying raw white quartz lumps for industrial buyers and bulk procurement, with bulk export services worldwide.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -113,33 +113,33 @@ export default function Home() {
               <h2 className="h-section text-[#111111]">Industrial <br/>Supply Applications</h2>
             </div>
             <p className="text-sm text-[#111111] font-medium max-w-xs leading-relaxed italic border-l-4 border-black pl-6">
-              "Serving industrial buyers across glass, ceramic, and mineral-based applications."
+              "Quarry-origin raw white quartz supply for semiconductors, solar, glass, ceramic, and construction industries."
             </p>
           </div>
         </div>
 
-        <div className="container-wide grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-px bg-transparent lg:bg-[#E6E6E6] lg:border border-[#E6E6E6]">
+        <div className="container-wide grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E6E6E6] border border-[#E6E6E6]">
           {[
-            { title: "Glass Manufacturing", span: "lg:col-span-8", desc: "SiO2 source for architectural and container glass clarity.", use: "Material Input" },
-            { title: "Ceramic Industry", span: "lg:col-span-4", desc: "Providing structural strength for industrial ceramic production.", use: "Structural Input" },
-            { title: "Construction", span: "lg:col-span-4", desc: "Aggregates for architectural concrete and mineral-based landscaping.", use: "Aggregate Supply" },
-            { title: "Engineered Stone", span: "lg:col-span-8", desc: "Mineral foundation for high-performance quartz surfaces.", use: "Base Material" }
+            { num: "01", title: "Semiconductors", desc: "Quartz raw material for high-purity silicon processing and advanced electronics supply chains.", use: "Silicon Feed Material" },
+            { num: "02", title: "Solar", desc: "Quartz raw material for solar glass and silicon-based energy manufacturing applications.", use: "Solar Grade Input" },
+            { num: "03", title: "Glass Manufacturing", desc: "Raw quartz material supporting clear, high-performance industrial glass production.", use: "Material Input" },
+            { num: "04", title: "Ceramic Industry", desc: "Quartz supply for ceramic strength, structure, and industrial-grade material formulations.", use: "Structural Input" },
+            { num: "05", title: "Construction", desc: "Quartz mineral input for aggregates, engineered materials, and mineral-based construction applications.", use: "Aggregate Supply" }
           ].map((item, idx) => (
-            <div 
-              key={idx} 
-              className={`${item.span} bg-white relative group border-x border-b border-[#E6E6E6] lg:border-none rounded-b-xl lg:rounded-none overflow-hidden first:border-t first:rounded-t-xl`}
+            <div
+              key={idx}
+              className="bg-white relative group overflow-hidden"
             >
               <div className="absolute inset-0 opacity-[0.03] technical-grid pointer-events-none"></div>
-              
-              <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full bg-white/80 border-l-2 border-transparent group-hover:border-black transition-all duration-500">
-                <div className="flex justify-between items-center mb-10">
-                   <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-400">Sector 0{idx + 1}</span>
-                   <div className="w-8 h-px bg-black/10"></div>
+              <div className="p-8 lg:p-12 relative z-10 flex flex-col h-full bg-white/80 border-l-2 border-transparent group-hover:border-black transition-all duration-500 min-h-[260px]">
+                <div className="flex justify-between items-center mb-8">
+                  <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-400">Sector {item.num}</span>
+                  <div className="w-8 h-px bg-black/10"></div>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold uppercase tracking-tight mb-4 lg:mb-6 text-[#111111]">{item.title}</h3>
-                <p className="text-sm text-[#111111] font-medium max-w-sm leading-relaxed mb-8">{item.desc}</p>
-                <div className="mt-auto pt-6 border-t border-black/5 flex flex-col">
-                  <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest mb-1">Primary Use</span>
+                <h3 className="text-lg lg:text-xl font-bold uppercase tracking-tight mb-4 text-[#111111]">{item.title}</h3>
+                <p className="text-sm text-[#111111] font-medium leading-relaxed mb-8 flex-1">{item.desc}</p>
+                <div className="pt-5 border-t border-black/5">
+                  <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest block mb-1">Primary Use</span>
                   <span className="text-[0.65rem] font-bold uppercase text-black">{item.use}</span>
                 </div>
               </div>
