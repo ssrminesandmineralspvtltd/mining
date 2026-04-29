@@ -19,8 +19,8 @@ const Footer = () => {
             <p className="text-sm text-gray-500 leading-relaxed mb-8 border-l border-black/10 pl-6">
               B2B supplier of high-purity raw white quartz lumps. Serving the glass, ceramic, and industrial mineral sectors worldwide.
             </p>
-            <div className="text-[0.6rem] font-bold text-gray-400 uppercase tracking-widest">
-              Verified Industrial Supplier / Logistics Integrated
+            <div className="text-[0.6rem] font-bold text-gray-500 uppercase tracking-widest">
+              Industrial Mineral Supplier / Logistics Integrated
             </div>
           </div>
 

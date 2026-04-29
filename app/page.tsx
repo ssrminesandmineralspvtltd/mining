@@ -12,7 +12,7 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Compact for Mobile */}
+      {/* Hero Section - Maximum Contrast */}
       <section className="relative flex flex-col pt-24 lg:pt-32 pb-12 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-center">
           <motion.div 
@@ -26,16 +26,16 @@ export default function Home() {
                 <div className="w-10 h-px bg-black"></div>
                 <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-black tracking-[0.4em] text-black">Direct Mine Sourcing</span>
               </div>
-              <h1 className="h-hero text-black">
+              <h1 className="h-hero text-black font-bold">
                 Raw White <br className="hidden md:block" /> Quartz Lumps
               </h1>
               <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center">
-                <p className="text-base lg:text-lg text-gray-900 font-medium max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
+                <p className="text-base lg:text-lg text-black font-bold max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
                   Supplying premium raw mineral inputs for high-precision industrial manufacturing globally.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                  <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !py-4 lg:!py-5">Request Quote</Link>
-                  <Link href="/products" className="btn-outline text-center w-full sm:w-auto !py-4 lg:!py-5">Specifications</Link>
+                  <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !py-4 lg:!py-5 !bg-black !text-white shadow-lg">Request Quote</Link>
+                  <Link href="/products" className="btn-outline text-center w-full sm:w-auto !py-4 lg:!py-5 !border-black !text-black !font-bold">Specifications</Link>
                 </div>
               </div>
             </div>
@@ -47,13 +47,13 @@ export default function Home() {
             transition={{ duration: 1.4, ease, delay: 0.2 }}
             className="lg:col-span-5 relative mt-4 lg:mt-0"
           >
-            {/* Featured Quartz Block - Rounded & Bordered for Mobile */}
-            <div className="relative aspect-[4/3] lg:aspect-square overflow-hidden rounded-xl border-4 border-white shadow-2xl">
+            {/* Featured Quartz Block */}
+            <div className="relative aspect-[4/3] lg:aspect-square overflow-hidden rounded-xl border-4 border-[#E6E6E6] bg-white shadow-xl">
               <Image 
                 src="/images/hero.png" 
                 alt="Raw White Quartz Lumps" 
                 fill 
-                className="object-cover transition-transform duration-[2s] ease-industrial"
+                className="object-cover"
                 priority
               />
             </div>
@@ -71,40 +71,41 @@ export default function Home() {
                 alt="High Purity White Quartz Lumps" 
                 fill 
                 className="object-cover"
+                priority
               />
             </div>
             <div className="space-y-8 lg:space-y-12">
               <div>
                 <span className="text-label mb-4 block">Primary Material</span>
                 <h2 className="h-section text-black mb-6">Industrial Grade <br/>White Quartz Lumps</h2>
-                <p className="text-gray-700 font-medium leading-relaxed max-w-lg">
-                  Direct from verified mining sites, our raw white quartz lumps are selected for maximum SiO2 purity and minimal iron oxide content.
+                <p className="text-black font-bold leading-relaxed max-w-lg">
+                  Direct from established mining sites, our raw white quartz lumps are selected for high SiO2 purity and minimal iron oxide content.
                 </p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
                 {[
                   { label: "Material Form", val: "Raw Lumps" },
-                  { label: "Purity Level", val: "99%+ SiO2" },
+                  { label: "Purity Grade", val: "High SiO2 Purity" },
                   { label: "Size Range", val: "50mm - 200mm" },
                   { label: "Color Grade", val: "Premium White" }
                 ].map((spec, i) => (
-                  <div key={i} className="border-l border-black/10 pl-6 py-1">
-                    <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-1">{spec.label}</span>
+                  <div key={i} className="border-l border-black pl-6 py-1">
+                    <span className="text-[0.6rem] font-black uppercase text-gray-500 block mb-1">{spec.label}</span>
                     <span className="text-sm font-bold text-black">{spec.val}</span>
                   </div>
                 ))}
               </div>
 
               <div className="pt-6">
-                <Link href="/contact" className="btn-primary">Download Technical Sheet</Link>
+                <Link href="/contact" className="btn-primary !bg-black">Download Technical Sheet</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Applications Section - Technical Industrial Grid */}
+      {/* Applications Section */}
       <section className="section-spacing bg-white overflow-hidden" id="applications">
         <div className="container-wide mb-12 lg:mb-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
@@ -112,7 +113,7 @@ export default function Home() {
               <span className="text-label mb-4 lg:mb-6 block">Sector Alignment</span>
               <h2 className="h-section text-black">Industrial <br/>Supply Applications</h2>
             </div>
-            <p className="text-sm text-gray-500 max-w-xs leading-relaxed italic border-l border-black/10 pl-6">
+            <p className="text-sm text-black font-medium max-w-xs leading-relaxed italic border-l border-black pl-6">
               "Precise mineral input for complex manufacturing chains."
             </p>
           </div>
@@ -125,7 +126,7 @@ export default function Home() {
               img: "/images/glass.png", 
               span: "lg:col-span-8", 
               desc: "Critical SiO2 source for architectural, container, and automotive glass clarity.",
-              spec: "High Purity (99%+ SiO2)",
+              spec: "High SiO2 Content",
               use: "Clarity Enhancement"
             },
             { 
@@ -158,7 +159,7 @@ export default function Home() {
               whileHover={{ backgroundColor: '#F8F9FA' }}
               className={`${item.span} bg-white relative group cursor-pointer overflow-hidden transition-colors duration-500 rounded-xl lg:rounded-none border lg:border-none border-[#E6E6E6]`}
             >
-              {/* Mobile Image Header Header */}
+              {/* Mobile Image Header - Real Photos */}
               <div className="relative w-full h-32 lg:hidden border-b border-[#E6E6E6]">
                 <Image src={item.img} alt={item.title} fill className="object-cover grayscale" />
                 <div className="absolute inset-0 bg-black/10"></div>
@@ -178,20 +179,20 @@ export default function Home() {
                 
                 <div className="flex-grow">
                   <h3 className="text-xl lg:text-2xl font-bold uppercase tracking-tight mb-4 lg:mb-6 text-black">{item.title}</h3>
-                  <p className="text-sm text-gray-700 max-w-sm leading-relaxed mb-8">{item.desc}</p>
+                  <p className="text-sm text-black font-medium max-w-sm leading-relaxed mb-8">{item.desc}</p>
                 </div>
                 
                 {/* Technical Specs Grid */}
                 <div className="grid grid-cols-2 lg:flex lg:items-center gap-6 pt-6 border-t border-black/5 lg:border-none">
                   <div className="flex flex-col lg:hidden">
-                    <span className="text-[0.5rem] font-black text-gray-400 uppercase tracking-widest mb-1">Alignment</span>
+                    <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest mb-1">Alignment</span>
                     <span className="text-[0.65rem] font-bold uppercase text-black">{item.spec}</span>
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-[0.5rem] font-black text-gray-400 uppercase tracking-widest mb-1">Primary Use</span>
+                    <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest mb-1">Primary Use</span>
                     <span className="text-[0.65rem] font-bold uppercase text-black">{item.use}</span>
                   </div>
-                  <div className="hidden lg:block w-12 h-px bg-black/10 group-hover:w-20 group-hover:bg-black transition-all duration-500"></div>
+                  <div className="hidden lg:block w-12 h-px bg-black group-hover:w-20 transition-all duration-500"></div>
                 </div>
               </div>
               
@@ -208,7 +209,7 @@ export default function Home() {
       <section className="section-spacing bg-[#F8F9FA] border-y border-[#E6E6E6]" id="reliability">
         <div className="container-wide">
           <div className="max-w-2xl mb-12 lg:mb-20">
-            <span className="text-label mb-4 block">Industrial Confidence</span>
+            <span className="text-label mb-4 block">Industrial Supply</span>
             <h2 className="h-section text-black mb-8">Supply Reliability <br/>& Corporate Stability</h2>
           </div>
 
@@ -219,12 +220,12 @@ export default function Home() {
               { title: "Quality Sourcing", desc: "Direct oversight of material integrity and mineral appearance." },
               { title: "B2B Communication", desc: "Direct technical support for procurement and logistics teams." }
             ].map((block, i) => (
-              <div key={i} className="space-y-4 border-t border-[#E6E6E6] pt-8 group hover:bg-white transition-colors p-4 lg:p-6 rounded-[2px]">
+              <div key={i} className="space-y-4 border-t border-black/10 pt-8 group hover:bg-white transition-colors p-4 lg:p-6 rounded-[2px]">
                 <div className="flex items-center gap-4">
-                  <span className="text-[0.6rem] font-black text-gray-300 group-hover:text-black">0{i + 1}</span>
+                  <span className="text-[0.6rem] font-black text-black group-hover:text-blue-600">0{i + 1}</span>
                   <h4 className="text-sm font-black uppercase tracking-widest text-black">{block.title}</h4>
                 </div>
-                <p className="text-sm text-gray-700 leading-relaxed pl-10 font-medium">{block.desc}</p>
+                <p className="text-sm text-black leading-relaxed pl-10 font-bold">{block.desc}</p>
               </div>
             ))}
           </div>
