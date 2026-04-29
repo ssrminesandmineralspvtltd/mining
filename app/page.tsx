@@ -19,10 +19,10 @@ export default function Home() {
             
             {/* 1. Quartz Pile (Image 4) - Volume & Authenticity */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative">
-              <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-2xl">
+              <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-gray-50 shadow-2xl">
                 <Image 
                   src="/images/hero_final.png" 
-                  alt="SSR White Quartz Lumps Stockpile - Raw Mineral Supply" 
+                  alt="SSR White Quartz Lumps Stockpile" 
                   fill 
                   className="object-cover"
                   priority
@@ -91,13 +91,13 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Specimen Close-Up - No Clipping */}
-            <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white p-6 rounded-xl overflow-hidden shadow-lg">
+            {/* Specimen Close-Up - No Clipping, No Filters */}
+            <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white rounded-xl overflow-hidden shadow-lg">
               <Image 
                 src="/images/product_final.png" 
                 alt="White Quartz Technical Specimen" 
                 fill 
-                className="object-contain"
+                className="object-cover"
               />
             </div>
           </div>
@@ -143,8 +143,6 @@ export default function Home() {
                   <span className="text-[0.65rem] font-bold uppercase text-black">{item.use}</span>
                 </div>
               </div>
-              
-              {/* Removed conceptual industrial images - keeping cards clean and technical */}
             </div>
           ))}
         </div>
@@ -154,12 +152,12 @@ export default function Home() {
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-xl bg-white p-6">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-xl bg-gray-50">
               <Image 
                 src="/images/about_final.png" 
-                alt="Raw White Quartz Analysis - Material Consistency" 
+                alt="Raw White Quartz Analysis" 
                 fill 
-                className="object-contain"
+                className="object-cover"
               />
             </div>
             <div>
