@@ -21,7 +21,7 @@ export default function Home() {
             <div className="order-1 lg:order-2 lg:col-span-5 relative">
               <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-gray-50 shadow-2xl">
                 <Image 
-                  src="/images/hero_final.png" 
+                  src="/images/quartz-pile.jpeg" 
                   alt="SSR White Quartz Lumps Stockpile" 
                   fill 
                   className="object-cover"
@@ -94,7 +94,7 @@ export default function Home() {
             {/* Specimen Close-Up - No Clipping, No Filters */}
             <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white rounded-xl overflow-hidden shadow-lg">
               <Image 
-                src="/images/product_final.png" 
+                src="/images/quartz-macro.jpeg" 
                 alt="White Quartz Technical Specimen" 
                 fill 
                 className="object-cover"
@@ -154,7 +154,7 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-xl bg-gray-50">
               <Image 
-                src="/images/about_final.png" 
+                src="/images/quartz-lump.jpeg" 
                 alt="Raw White Quartz Analysis" 
                 fill 
                 className="object-cover"
