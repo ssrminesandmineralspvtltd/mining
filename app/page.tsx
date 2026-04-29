@@ -12,17 +12,17 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Material First Re-Ordering */}
-      <section className="relative flex flex-col pt-4 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
+      {/* Hero Section - Maximum Authenticity */}
+      <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
             
-            {/* Hero Image - ORDER 1 on Mobile, ORDER 2 on Desktop */}
+            {/* Hero Image - REAL Material Visual First */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
               <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
                 <Image 
-                  src="/images/hero.png" 
-                  alt="Raw White Quartz Lumps Stockpile" 
+                  src="/images/lumps.png" 
+                  alt="Authentic Raw White Quartz Lumps" 
                   fill 
                   className="object-cover"
                   priority
@@ -30,14 +30,14 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero Text - ORDER 2 on Mobile, ORDER 1 on Desktop */}
+            {/* Hero Text */}
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col">
               <div className="space-y-6 lg:space-y-10">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-px bg-black"></div>
                   <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">SSR Mines and Minerals Pvt Ltd</span>
                 </div>
-                <h1 className="text-[2.75rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
+                <h1 className="text-[2.25rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
                   Raw White <br className="hidden md:block" /> Quartz Lumps
                 </h1>
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
@@ -89,11 +89,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Image Column - Desktop Only for Flow Preservation */}
+            {/* Image Column */}
             <div className="hidden lg:flex relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm order-2">
               <Image 
-                src="/images/lumps.png" 
-                alt="White Quartz Lumps Technical Detail" 
+                src="/images/hero.png" 
+                alt="Industrial Supply Infrastructure" 
                 fill 
                 className="object-cover"
               />

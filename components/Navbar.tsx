@@ -28,9 +28,9 @@ const Navbar = () => {
         isScrolled ? 'bg-white/90 backdrop-blur-xl border-b border-[#E6E6E6] py-3' : 'bg-transparent py-8'
       }`}>
         <div className="container-wide flex justify-between items-center">
-          <Link href="/" className="flex flex-col group relative">
-            <span className="logo-ssr transition-all duration-500 group-hover:tracking-[0.5em]">SSR</span>
-            <span className="logo-subtext">MINES AND MINERALS PVT LTD</span>
+          <Link href="/" className="flex flex-col group relative max-w-[70%] sm:max-w-none">
+            <span className="logo-ssr transition-all duration-500 group-hover:tracking-[0.5em] text-xl sm:text-[1.75rem]">SSR</span>
+            <span className="logo-subtext tracking-[0.2em] sm:tracking-[0.4em] truncate">MINES AND MINERALS PVT LTD</span>
           </Link>
           
           <div className="hidden lg:flex items-center">
