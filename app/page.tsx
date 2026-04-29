@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 export default function Home() {
-  const ease = [0.4, 0, 0.2, 1];
+  const ease = [0.4, 0, 0.2, 1] as const;
 
   return (
     <main className="bg-white selection:bg-black selection:text-white">
