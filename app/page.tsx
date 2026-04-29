@@ -9,26 +9,27 @@ export default function Home() {
 
   return (
     <main className="bg-white selection:bg-black selection:text-white">
-      {/* Structural Background Grid - Reduced Opacity on Mobile */}
+      {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Compact & High Contrast */}
+      {/* Hero Section - Static on Mobile for Instant Visibility */}
       <section className="relative flex flex-col pt-20 pb-12 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
-            {/* Hero Text - No Fade on Mobile for Instant Visibility */}
+            {/* Hero Text */}
             <div className="lg:col-span-7 flex flex-col">
               <div className="space-y-6 lg:space-y-10">
-                <div className="flex items-center gap-4">
+                {/* Brand label hidden on mobile to avoid duplication */}
+                <div className="hidden lg:flex items-center gap-4">
                   <div className="w-10 h-px bg-black"></div>
-                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-black tracking-[0.4em] text-black">SSR Mines and Minerals</span>
+                  <span className="text-[0.7rem] uppercase font-black tracking-[0.4em] text-black">SSR Mines and Minerals</span>
                 </div>
                 <h1 className="text-[2.75rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
                   Raw White <br className="hidden md:block" /> Quartz Lumps
                 </h1>
                 <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center">
                   <p className="text-base lg:text-lg text-[#111111] font-bold max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
-                    Supplying premium raw mineral inputs for industrial manufacturing globally.
+                    Supplying premium raw mineral inputs for industrial manufacturing.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !bg-[#111111] !text-white !py-4 lg:!py-5">Request Quote</Link>
@@ -38,11 +39,11 @@ export default function Home() {
               </div>
             </div>
             
-            {/* Hero Image - Placed Directly Below Text on Mobile */}
+            {/* Hero Image - Authentic Quartz Lumps */}
             <div className="lg:col-span-5 relative mt-8 lg:mt-0">
               <div className="relative aspect-[4/3] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
                 <Image 
-                  src="/images/hero.png" 
+                  src="/images/lumps.png" 
                   alt="Raw White Quartz Lumps" 
                   fill 
                   className="object-cover"
@@ -123,16 +124,16 @@ export default function Home() {
               key={idx} 
               className={`${item.span} bg-white relative group border border-[#E6E6E6] lg:border-none rounded-xl lg:rounded-none overflow-hidden`}
             >
-              {/* Real Image Header on Mobile */}
-              <div className="relative w-full h-40 lg:hidden">
-                <Image src={item.img} alt={item.title} fill className="object-cover grayscale" />
+              {/* Force Real Image Header on Mobile */}
+              <div className="block lg:hidden relative w-full h-48 z-0">
+                <Image src={item.img} alt={item.title} fill className="object-cover grayscale opacity-100" />
                 <div className="absolute inset-0 bg-black/10"></div>
-                <div className="absolute top-4 left-4 bg-white/95 px-3 py-1 border border-black/10">
+                <div className="absolute top-4 left-4 bg-white/95 px-3 py-1 border border-black/10 z-10">
                    <span className="text-[0.6rem] font-black uppercase tracking-widest text-black">Sector 0{idx + 1}</span>
                 </div>
               </div>
 
-              <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full">
+              <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full bg-white">
                 <h3 className="text-xl lg:text-2xl font-bold uppercase tracking-tight mb-4 lg:mb-6 text-[#111111]">{item.title}</h3>
                 <p className="text-sm text-[#111111] font-bold max-w-sm leading-relaxed mb-8">{item.desc}</p>
                 <div className="mt-auto pt-6 border-t border-black/5 flex flex-col">
@@ -141,6 +142,7 @@ export default function Home() {
                 </div>
               </div>
               
+              {/* Desktop Image Preview */}
               <div className="absolute right-0 top-0 bottom-0 w-0 group-hover:w-1/3 transition-all duration-1000 ease-industrial opacity-0 group-hover:opacity-10 hidden lg:block">
                 <Image src={item.img} alt={item.title} fill className="object-cover grayscale" />
               </div>
@@ -149,7 +151,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer Reliability Section */}
+      {/* Supply Reliability Section */}
       <section className="section-spacing bg-[#F8F9FA] border-y border-[#E6E6E6]" id="reliability">
         <div className="container-wide">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">

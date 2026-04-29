@@ -17,7 +17,7 @@ const Footer = () => {
               <span className="logo-subtext">MINES AND MINERALS PVT LTD</span>
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-8 border-l border-black/10 pl-6">
-              B2B supplier of high-purity raw white quartz lumps. Serving the glass, ceramic, and industrial mineral sectors worldwide.
+              B2B supplier of raw white quartz lumps. Serving industrial buyers across glass, ceramic, and mineral-based applications.
             </p>
             <div className="text-[0.6rem] font-bold text-gray-500 uppercase tracking-widest">
               Industrial Mineral Supplier / Logistics Integrated
