@@ -12,12 +12,12 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section */}
+      {/* Hero Section - Strict Alignment to User Flow */}
       <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
             
-            {/* Hero Image - Optimized Mobile Height */}
+            {/* 1. Quartz Image (Mobile Order 1) */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
               <div className="relative aspect-[16/8.5] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
                 <Image 
@@ -30,20 +30,27 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Hero Text */}
+            {/* 2. Text Content (Mobile Order 2) */}
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col">
               <div className="space-y-6 lg:space-y-10">
-                <div className="flex items-center gap-4">
+                {/* Mini label hidden on mobile for maximum cleanliness */}
+                <div className="hidden lg:flex items-center gap-4">
                   <div className="w-10 h-px bg-black"></div>
                   <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">Raw White Quartz Supply</span>
                 </div>
+                
+                {/* 3. Headline */}
                 <h1 className="text-[2.25rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
                   Raw White <br className="hidden md:block" /> Quartz Lumps
                 </h1>
+                
+                {/* 4. Subtext */}
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
                   <p className="text-base lg:text-lg text-[#111111] font-medium max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
                     Supplying raw white quartz lumps for industrial buyers and bulk procurement.
                   </p>
+                  
+                  {/* 5. Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !bg-[#111111] !text-white !py-3.5 lg:!py-5">Request Quote</Link>
                     <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-bold !py-3.5 lg:!py-5">Material Details</Link>
@@ -60,7 +67,6 @@ export default function Home() {
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-[#F8F9FA] relative border-y border-[#E6E6E6]" id="products">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            {/* Content Column */}
             <div className="space-y-8 lg:space-y-12 order-1">
               <div>
                 <span className="text-label mb-4 block">Material Details</span>
@@ -89,7 +95,6 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Image Column */}
             <div className="hidden lg:flex relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm order-2">
               <Image 
                 src="/images/hero.png" 
@@ -102,7 +107,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industrial Applications - Material Accents */}
+      {/* Industrial Applications */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white overflow-hidden" id="applications">
         <div className="container-wide mb-12 lg:mb-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
@@ -127,7 +132,6 @@ export default function Home() {
               key={idx} 
               className={`${item.span} bg-white relative group border-x border-b border-[#E6E6E6] lg:border-none rounded-b-xl lg:rounded-none overflow-hidden first:border-t first:rounded-t-xl`}
             >
-              {/* Subtle Quartz Accent Pattern */}
               <div className="absolute inset-0 opacity-[0.03] technical-grid pointer-events-none"></div>
               
               <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full bg-white/80 border-l-2 border-transparent group-hover:border-black transition-all duration-500">
