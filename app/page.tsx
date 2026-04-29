@@ -12,35 +12,14 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Compact Precision */}
-      <section className="relative flex flex-col pt-8 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
+      {/* Hero Section - Material First Re-Ordering */}
+      <section className="relative flex flex-col pt-4 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start lg:items-center">
-            {/* Hero Text */}
-            <div className="lg:col-span-7 flex flex-col">
-              <div className="space-y-6 lg:space-y-10">
-                <div className="flex items-center gap-4">
-                  <div className="w-10 h-px bg-black"></div>
-                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">SSR Mines and Minerals Pvt Ltd</span>
-                </div>
-                <h1 className="text-[2.5rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
-                  Raw White <br className="hidden md:block" /> Quartz Lumps
-                </h1>
-                <div className="flex flex-col md:flex-row gap-8 lg:gap-12 items-start md:items-center">
-                  <p className="text-base lg:text-lg text-[#111111] font-bold max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
-                    Supplying raw white quartz lumps for industrial buyers and bulk procurement.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
-                    <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !bg-[#111111] !text-white !py-4 lg:!py-5">Request Quote</Link>
-                    <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-bold !py-4 lg:!py-5">Material Details</Link>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
             
-            {/* Hero Image - Authentic Mineral Visual */}
-            <div className="lg:col-span-5 relative mt-8 lg:mt-0">
-              <div className="relative aspect-[4/3] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
+            {/* Hero Image - ORDER 1 on Mobile, ORDER 2 on Desktop */}
+            <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
+              <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
                 <Image 
                   src="/images/hero.png" 
                   alt="Raw White Quartz Lumps Stockpile" 
@@ -50,15 +29,38 @@ export default function Home() {
                 />
               </div>
             </div>
+
+            {/* Hero Text - ORDER 2 on Mobile, ORDER 1 on Desktop */}
+            <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col">
+              <div className="space-y-6 lg:space-y-10">
+                <div className="flex items-center gap-4">
+                  <div className="w-10 h-px bg-black"></div>
+                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">SSR Mines and Minerals Pvt Ltd</span>
+                </div>
+                <h1 className="text-[2.75rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
+                  Raw White <br className="hidden md:block" /> Quartz Lumps
+                </h1>
+                <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
+                  <p className="text-base lg:text-lg text-[#111111] font-bold max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
+                    Supplying raw white quartz lumps for industrial buyers and bulk procurement.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                    <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !bg-[#111111] !text-white !py-3.5 lg:!py-5">Request Quote</Link>
+                    <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-bold !py-3.5 lg:!py-5">Material Details</Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </section>
 
-      {/* Material Specifications Section - Text First Flow */}
+      {/* Material Specifications Section */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-[#F8F9FA] relative border-y border-[#E6E6E6]" id="products">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
-            {/* Content Column - Swapped to top for mobile/left for desktop */}
+            {/* Content Column */}
             <div className="space-y-8 lg:space-y-12 order-1">
               <div>
                 <span className="text-label mb-4 block">Material Details</span>
@@ -83,11 +85,11 @@ export default function Home() {
               </div>
 
               <div className="pt-6">
-                <Link href="/contact" className="btn-primary !bg-[#111111] !w-full lg:!w-auto text-center">Inquire for Data Sheet</Link>
+                <Link href="/contact" className="btn-primary !bg-[#111111] !w-full lg:!w-auto text-center !py-4 lg:!py-5">Inquire for Data Sheet</Link>
               </div>
             </div>
 
-            {/* Image Column - Hidden on mobile, appearing on the right for desktop */}
+            {/* Image Column - Desktop Only for Flow Preservation */}
             <div className="hidden lg:flex relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-sm order-2">
               <Image 
                 src="/images/lumps.png" 
@@ -138,7 +140,6 @@ export default function Home() {
                 </div>
               </div>
               
-              {/* Desktop Only Background Hint */}
               <div className="absolute right-0 top-0 bottom-0 w-0 group-hover:w-1/3 transition-all duration-1000 ease-industrial opacity-0 group-hover:opacity-10 hidden lg:block">
                 <Image src={item.img} alt={item.title} fill className="object-cover grayscale" />
               </div>
