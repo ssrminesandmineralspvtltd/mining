@@ -12,17 +12,17 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Pure Material Visibility */}
+      {/* Hero Section - Real Quarry Authority */}
       <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
-            {/* 1. Quartz Image (Image 4) - Stockpile Lead */}
+            {/* 1. Quartz Pile (Image 4) - Volume & Authenticity */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative">
               <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-2xl">
                 <Image 
                   src="/images/hero_final.png" 
-                  alt="Authentic Stockpile - SSR White Quartz Lumps" 
+                  alt="SSR White Quartz Lumps Stockpile - Raw Mineral Supply" 
                   fill 
                   className="object-cover"
                   priority
@@ -59,7 +59,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Material Specifications Section - Crystalline Detail (Image 2) */}
+      {/* Material Specifications Section - Technical Specimen (Image 2) */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-[#F8F9FA] relative border-y border-[#E6E6E6]" id="products">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
@@ -91,20 +91,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Product Detail Image - Now Visible on All Screens */}
-            <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white p-4 rounded-xl overflow-hidden shadow-lg">
+            {/* Specimen Close-Up - No Clipping */}
+            <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white p-6 rounded-xl overflow-hidden shadow-lg">
               <Image 
                 src="/images/product_final.png" 
-                alt="Industrial White Quartz Mineral Detail" 
+                alt="White Quartz Technical Specimen" 
                 fill 
-                className="object-contain p-4"
+                className="object-contain"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Industrial Applications - Clean Industry Links */}
+      {/* Industrial Applications - Text-Focused Industrial Cards */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white overflow-hidden" id="applications">
         <div className="container-wide mb-12 lg:mb-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
@@ -120,10 +120,10 @@ export default function Home() {
 
         <div className="container-wide grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-px bg-transparent lg:bg-[#E6E6E6] lg:border border-[#E6E6E6]">
           {[
-            { title: "Glass Manufacturing", img: "/images/glass.png", span: "lg:col-span-8", desc: "SiO2 source for architectural and container glass clarity.", use: "Material Input" },
-            { title: "Ceramic Industry", img: "/images/ceramic.png", span: "lg:col-span-4", desc: "Providing structural strength for industrial ceramic production.", use: "Structural Input" },
-            { title: "Construction", img: "/images/construction.png", span: "lg:col-span-4", desc: "Aggregates for architectural concrete and mineral-based landscaping.", use: "Aggregate Supply" },
-            { title: "Engineered Stone", img: "/images/stone.png", span: "lg:col-span-8", desc: "Mineral foundation for high-performance quartz surfaces.", use: "Base Material" }
+            { title: "Glass Manufacturing", span: "lg:col-span-8", desc: "SiO2 source for architectural and container glass clarity.", use: "Material Input" },
+            { title: "Ceramic Industry", span: "lg:col-span-4", desc: "Providing structural strength for industrial ceramic production.", use: "Structural Input" },
+            { title: "Construction", span: "lg:col-span-4", desc: "Aggregates for architectural concrete and mineral-based landscaping.", use: "Aggregate Supply" },
+            { title: "Engineered Stone", span: "lg:col-span-8", desc: "Mineral foundation for high-performance quartz surfaces.", use: "Base Material" }
           ].map((item, idx) => (
             <div 
               key={idx} 
@@ -144,9 +144,7 @@ export default function Home() {
                 </div>
               </div>
               
-              <div className="absolute right-0 top-0 bottom-0 w-0 group-hover:w-1/3 transition-all duration-1000 ease-industrial opacity-0 group-hover:opacity-100 hidden lg:block">
-                <Image src={item.img} alt={item.title} fill className="object-cover" />
-              </div>
+              {/* Removed conceptual industrial images - keeping cards clean and technical */}
             </div>
           ))}
         </div>
@@ -156,10 +154,10 @@ export default function Home() {
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-xl bg-white p-4">
+            <div className="relative aspect-[16/10] overflow-hidden rounded-xl border border-[#E6E6E6] shadow-xl bg-white p-6">
               <Image 
                 src="/images/about_final.png" 
-                alt="Raw Mineral Analysis - SSR Quartz Integrity" 
+                alt="Raw White Quartz Analysis - Material Consistency" 
                 fill 
                 className="object-contain"
               />
@@ -172,9 +170,9 @@ export default function Home() {
               </p>
               <div className="flex items-center gap-6">
                 <div className="w-12 h-12 rounded-full bg-[#F8F9FA] flex items-center justify-center border border-[#E6E6E6]">
-                  <span className="text-[0.7rem] font-bold text-black">99%</span>
+                  <span className="text-[0.7rem] font-bold text-black">PASS</span>
                 </div>
-                <span className="text-[0.65rem] font-black uppercase tracking-widest text-gray-500">Mineral Purity Compliance</span>
+                <span className="text-[0.65rem] font-black uppercase tracking-widest text-gray-500">Mineral Compliance Standard</span>
               </div>
             </div>
           </div>
