@@ -55,7 +55,7 @@ const ApplicationsPage = () => {
             <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-gray-400 mb-4 block">Sector Expertise</span>
             <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">Industrial Applications</h1>
             <p className="text-lg text-gray-500 max-w-2xl mx-auto leading-relaxed">
-              Quarry-origin raw white quartz supply for key industrial sectors. Specifications and bulk supply details shared on request.
+              Quarry-origin raw white quartz supply supporting semiconductors, solar, glass, ceramic, construction, and other industrial applications. Specifications and bulk supply details shared on request.
             </p>
           </motion.div>
         </div>

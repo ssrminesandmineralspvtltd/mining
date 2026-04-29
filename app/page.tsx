@@ -113,7 +113,7 @@ export default function Home() {
               <h2 className="h-section text-[#111111]">Industrial <br/>Supply Applications</h2>
             </div>
             <p className="text-sm text-[#111111] font-medium max-w-xs leading-relaxed italic border-l-4 border-black pl-6">
-              "Quarry-origin raw white quartz supply for semiconductors, solar, glass, ceramic, and construction industries."
+              "Quarry-origin raw white quartz supply supporting semiconductors, solar, glass, ceramic, construction, and other industrial applications."
             </p>
           </div>
         </div>
