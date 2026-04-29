@@ -118,17 +118,17 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="container-wide grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E6E6E6] border border-[#E6E6E6]">
+        <div className="container-wide grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-px bg-[#E6E6E6] border border-[#E6E6E6]">
           {[
-            { num: "01", title: "Semiconductors", desc: "Quartz raw material for high-purity silicon processing and advanced electronics supply chains.", use: "Silicon Feed Material" },
-            { num: "02", title: "Solar", desc: "Quartz raw material for solar glass and silicon-based energy manufacturing applications.", use: "Solar Grade Input" },
-            { num: "03", title: "Glass Manufacturing", desc: "Raw quartz material supporting clear, high-performance industrial glass production.", use: "Material Input" },
-            { num: "04", title: "Ceramic Industry", desc: "Quartz supply for ceramic strength, structure, and industrial-grade material formulations.", use: "Structural Input" },
-            { num: "05", title: "Construction", desc: "Quartz mineral input for aggregates, engineered materials, and mineral-based construction applications.", use: "Aggregate Supply" }
+            { num: "01", title: "Semiconductors", desc: "Quartz raw material for high-purity silicon processing and advanced electronics supply chains.", use: "Silicon Feed Material", span: "lg:col-span-2" },
+            { num: "02", title: "Solar", desc: "Quartz raw material for solar glass and silicon-based energy manufacturing applications.", use: "Solar Grade Input", span: "lg:col-span-2" },
+            { num: "03", title: "Glass Manufacturing", desc: "Raw quartz material supporting clear, high-performance industrial glass production.", use: "Material Input", span: "lg:col-span-2" },
+            { num: "04", title: "Ceramic Industry", desc: "Quartz supply for ceramic strength, structure, and industrial-grade material formulations.", use: "Structural Input", span: "lg:col-span-3" },
+            { num: "05", title: "Construction", desc: "Quartz mineral input for aggregates, engineered materials, and mineral-based construction applications.", use: "Aggregate Supply", span: "lg:col-span-3" }
           ].map((item, idx) => (
             <div
               key={idx}
-              className="bg-white relative group overflow-hidden"
+              className={`${item.span} bg-white relative group overflow-hidden`}
             >
               <div className="absolute inset-0 opacity-[0.03] technical-grid pointer-events-none"></div>
               <div className="p-8 lg:p-12 relative z-10 flex flex-col h-full bg-white/80 border-l-2 border-transparent group-hover:border-black transition-all duration-500 min-h-[260px]">

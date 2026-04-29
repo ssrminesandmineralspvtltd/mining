@@ -61,10 +61,10 @@ const ApplicationsPage = () => {
         </div>
       </section>
 
-      {/* Applications Grid — 5 Sectors */}
+      {/* Applications Grid — 5 Sectors, 3+2 Layout */}
       <section className="py-24">
         <div className="max-w-[1440px] mx-auto px-[5%]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-[#E6E6E6] border border-[#E6E6E6]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-px bg-[#E6E6E6] border border-[#E6E6E6]">
             {sectors.map((sector, idx) => (
               <motion.div
                 key={idx}
@@ -72,9 +72,9 @@ const ApplicationsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.08 }}
-                className="bg-white group relative overflow-hidden"
+                className={`${idx < 3 ? 'lg:col-span-2' : 'lg:col-span-3'} bg-white group relative overflow-hidden`}
               >
-                <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ backgroundImage: 'repeating-linear-gradient(0deg,transparent,transparent 39px,#000 39px,#000 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,#000 39px,#000 40px)' }}></div>
+                <div className="absolute inset-0 opacity-[0.03] technical-grid pointer-events-none"></div>
                 <div className="p-10 lg:p-12 flex flex-col h-full border-l-2 border-transparent group-hover:border-black transition-all duration-500 min-h-[300px]">
                   <div className="flex justify-between items-center mb-8">
                     <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-400">Sector {sector.num}</span>
@@ -89,27 +89,6 @@ const ApplicationsPage = () => {
                 </div>
               </motion.div>
             ))}
-            {/* 6th cell — CTA to balance the 3-col grid */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.45 }}
-              className="bg-[#111111] group relative overflow-hidden"
-            >
-              <div className="p-10 lg:p-12 flex flex-col h-full justify-between min-h-[300px]">
-                <div>
-                  <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-500 block mb-8">Bulk Inquiry</span>
-                  <h2 className="text-xl font-bold uppercase tracking-tight mb-4 text-white">Other Requirements?</h2>
-                  <p className="text-sm text-gray-400 font-medium leading-relaxed">
-                    If your sector has specific mineral requirements, connect with our team for direct supply alignment.
-                  </p>
-                </div>
-                <Link href="/contact" className="mt-8 inline-block border border-white text-white text-[0.65rem] font-bold uppercase tracking-widest px-6 py-3 hover:bg-white hover:text-black transition-all duration-300">
-                  Contact Us →
-                </Link>
-              </div>
-            </motion.div>
           </div>
         </div>
       </section>
