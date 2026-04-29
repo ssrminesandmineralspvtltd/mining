@@ -92,7 +92,7 @@ const Navbar = () => {
             </Link>
             <div className="mt-12 pt-8 border-t border-[#E6E6E6]">
               <span className="text-[0.6rem] font-black text-gray-400 uppercase tracking-widest block mb-4">Industrial Support</span>
-              <p className="text-sm font-bold">+91 7981392465</p>
+              <p className="text-sm font-bold">+91 9885134569</p>
             </div>
           </div>
         </div>

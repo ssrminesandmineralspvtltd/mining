@@ -44,7 +44,7 @@ export default function Home() {
                 
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
                   <p className="text-base lg:text-lg text-[#111111] font-medium max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
-                    Supplying raw white quartz lumps for industrial buyers and bulk procurement.
+                    Quarry-source white quartz lumps supplied directly to industrial buyers and bulk procurement chains.
                   </p>
                   
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -68,7 +68,7 @@ export default function Home() {
                 <span className="text-label mb-4 block">Material Details</span>
                 <h2 className="h-section text-[#111111] mb-6">Industrial Grade <br/>White Quartz Lumps</h2>
                 <p className="text-[#111111] font-medium leading-relaxed max-w-lg">
-                  Direct sourcing of raw white quartz lumps for industrial manufacturing chains. Bulk supply inquiries welcome.
+                  Direct quarry-based supply of raw white quartz lumps for industrial manufacturing chains. Bulk inquiries welcome.
                 </p>
               </div>
               
@@ -94,7 +94,7 @@ export default function Home() {
             {/* Specimen Close-Up - No Clipping, No Filters */}
             <div className="order-1 lg:order-2 relative aspect-square border border-[#E6E6E6] bg-white rounded-xl overflow-hidden shadow-lg">
               <Image 
-                src="/images/quartz-macro.jpeg" 
+                src="/images/quartz-macro.png" 
                 alt="White Quartz Technical Specimen" 
                 fill 
                 className="object-cover"
@@ -164,7 +164,7 @@ export default function Home() {
               <span className="text-label mb-4 block">Quality Assurance</span>
               <h2 className="h-section text-[#111111] mb-6">Material Integrity</h2>
               <p className="text-[#111111] font-medium leading-relaxed max-w-lg mb-8">
-                Our raw white quartz lumps undergo strict inspection to ensure consistency in industrial grade and mineral purity. Directly sourced from verified quarry sites.
+                Our raw white quartz lumps are extracted and supplied directly from our own quarry source — ensuring consistency in mineral grade, purity, and supply continuity.
               </p>
               <div className="flex items-center gap-6">
                 <div className="w-12 h-12 rounded-full bg-[#F8F9FA] flex items-center justify-center border border-[#E6E6E6]">

@@ -28,7 +28,7 @@ const ContactPage = () => {
             <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-gray-400 mb-4 block">Get in Touch</span>
             <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">Industrial Inquiries</h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Connect with our mineral procurement specialists for bulk supply quotes and technical data.
+              Connect directly with our quarry-sourced supply team for bulk inquiries, pricing, and technical data.
             </p>
           </motion.div>
         </div>
@@ -74,7 +74,7 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-widest mb-2">Direct Phone</h4>
-                  <p className="text-lg font-medium">+91 7981392465</p>
+
                   <p className="text-lg font-medium">+91 9885134569</p>
                   <p className="text-sm text-gray-400 mt-1">Available Mon-Fri, 9am - 6pm.</p>
                 </div>
@@ -86,7 +86,7 @@ const ContactPage = () => {
                 <h4 className="font-bold text-sm mb-1">Instant WhatsApp Support</h4>
                 <p className="text-xs text-blue-600 font-semibold">Direct chat with sales team</p>
               </div>
-              <a href="https://wa.me/917981392465" className="bg-[#1A1A1A] p-3 rounded-full text-white hover:scale-110 transition-transform">
+              <a href="https://wa.me/919885134569" className="bg-[#1A1A1A] p-3 rounded-full text-white hover:scale-110 transition-transform">
                 <MessageCircle size={20} />
               </a>
             </div>
