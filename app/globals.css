@@ -30,8 +30,13 @@ body {
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%;
+  padding-left: 1.5rem; /* Standard mobile gutter */
+  padding-right: 1.5rem;
+  
+  @media (min-width: 1024px) {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
 }
 
 @utility btn-primary {
@@ -102,14 +107,14 @@ body {
 }
 
 @utility h-hero {
-  font-size: clamp(3rem, 8vw, 6.5rem);
+  font-size: clamp(2.5rem, 10vw, 6.5rem);
   line-height: 0.95;
   letter-spacing: -0.04em;
   font-weight: 400;
 }
 
 @utility h-section {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(1.85rem, 6vw, 4rem);
   line-height: 1.1;
   letter-spacing: -0.02em;
 }

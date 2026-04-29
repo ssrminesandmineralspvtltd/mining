@@ -32,9 +32,9 @@ export default function Home() {
               <p className="text-lg text-gray-500 max-w-sm leading-relaxed border-l-2 border-black pl-8">
                 Supplying premium raw mineral inputs for high-precision industrial manufacturing globally.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/contact" className="btn-primary">Request Quote</Link>
-                <Link href="/products" className="btn-outline">Specifications</Link>
+              <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <Link href="/contact" className="btn-primary text-center w-full sm:w-auto">Request Quote</Link>
+                <Link href="/products" className="btn-outline text-center w-full sm:w-auto">Specifications</Link>
               </div>
             </div>
           </motion.div>
@@ -169,14 +169,14 @@ export default function Home() {
               <div className="relative z-10 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-12">
                   <span className="text-[0.6rem] font-black text-black/20 group-hover:text-black transition-colors">Sector 0{idx + 1}</span>
-                  <div className="flex flex-col items-end opacity-0 group-hover:opacity-100 transition-all duration-700 translate-x-4 group-hover:translate-x-0">
+                  <div className="flex flex-col items-end opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-all duration-700 lg:translate-x-4 lg:group-hover:translate-x-0">
                     <span className="text-[0.5rem] font-black text-gray-400 uppercase tracking-widest">Alignment</span>
-                    <span className="text-[0.7rem] font-bold text-black">{item.spec}</span>
+                    <span className="text-[0.7rem] font-bold text-black text-right">{item.spec}</span>
                   </div>
                 </div>
                 
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-6 group-hover:translate-x-2 transition-transform duration-500">{item.title}</h3>
+                  <h3 className="text-2xl font-bold uppercase tracking-tight mb-6 lg:group-hover:translate-x-2 transition-transform duration-500">{item.title}</h3>
                   <p className="text-sm text-gray-500 max-w-sm leading-relaxed mb-8">{item.desc}</p>
                 </div>
                 
@@ -185,7 +185,7 @@ export default function Home() {
                     <span className="text-[0.5rem] font-black text-gray-400 uppercase tracking-widest">Primary Use</span>
                     <span className="text-[0.65rem] font-bold uppercase">{item.use}</span>
                   </div>
-                  <div className="w-12 h-px bg-black/10 group-hover:w-20 group-hover:bg-black transition-all duration-500"></div>
+                  <div className="w-12 h-px bg-black/10 lg:group-hover:w-20 lg:group-hover:bg-black transition-all duration-500"></div>
                 </div>
               </div>
               
