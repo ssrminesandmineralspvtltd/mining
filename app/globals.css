@@ -1,26 +1,115 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  
+  --color-background: #FFFFFF;
+  --color-foreground: #1A1A1A;
+  
+  --color-secondary-bg: #F8F9FA;
+  --color-surface-accent: #F1F0EB;
+  --color-border-color: #E6E6E6;
+  --color-accent-blue: #EBF2FA;
+
+  --ease-industrial: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #FFFFFF;
+  --foreground: #1A1A1A;
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Component Utilities */
+@utility container-wide {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+@utility btn-primary {
+  background-color: #1A1A1A;
+  color: #FFFFFF;
+  padding: 1rem 2.5rem;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.5s var(--ease-industrial);
+  display: inline-block;
+  border: 1px solid #1A1A1A;
+}
+
+@utility btn-outline {
+  border: 1px solid #E6E6E6;
+  color: #1A1A1A;
+  padding: 1rem 2.5rem;
+  border-radius: 2px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  transition: all 0.5s var(--ease-industrial);
+  display: inline-block;
+}
+
+@utility logo-ssr {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  line-height: 1;
+}
+
+@utility logo-subtext {
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+@utility section-spacing { 
+  padding-top: 140px; 
+  padding-bottom: 140px; 
+
+  @media (min-width: 768px) { 
+    padding-top: 200px; 
+    padding-bottom: 200px; 
+  }
+}
+
+@utility technical-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, #f8f8f8 1px, transparent 1px),
+    linear-gradient(to bottom, #f8f8f8 1px, transparent 1px);
+}
+
+@utility text-label {
+  font-size: 0.65rem;
+  font-weight: 800;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+@utility h-hero {
+  font-size: clamp(3rem, 8vw, 6.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  font-weight: 400;
+}
+
+@utility h-section {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
