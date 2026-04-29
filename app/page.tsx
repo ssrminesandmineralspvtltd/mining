@@ -12,17 +12,17 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Strict Alignment to User Flow */}
+      {/* Hero Section */}
       <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
             
-            {/* 1. Quartz Image (Mobile Order 1) */}
+            {/* 1. Quartz Image - Rugged Industrial Frame */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
-              <div className="relative aspect-[16/8.5] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
+              <div className="relative aspect-[16/8.5] lg:aspect-square overflow-hidden rounded-xl border border-[#E6E6E6] bg-[#F8F9FA] shadow-lg">
                 <Image 
                   src="/images/lumps.png" 
-                  alt="Authentic Raw White Quartz Lumps" 
+                  alt="Raw Mineral Sample - White Quartz Lumps" 
                   fill 
                   className="object-cover"
                   priority
@@ -30,30 +30,26 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 2. Text Content (Mobile Order 2) */}
+            {/* 2. Text Content */}
             <div className="order-2 lg:order-1 lg:col-span-7 flex flex-col">
               <div className="space-y-6 lg:space-y-10">
-                {/* Mini label hidden on mobile for maximum cleanliness */}
                 <div className="hidden lg:flex items-center gap-4">
                   <div className="w-10 h-px bg-black"></div>
-                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">Raw White Quartz Supply</span>
+                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-medium tracking-[0.4em] text-black">Raw White Quartz Supply</span>
                 </div>
                 
-                {/* 3. Headline */}
                 <h1 className="text-[2.25rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
                   Raw White <br className="hidden md:block" /> Quartz Lumps
                 </h1>
                 
-                {/* 4. Subtext */}
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
                   <p className="text-base lg:text-lg text-[#111111] font-medium max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
                     Supplying raw white quartz lumps for industrial buyers and bulk procurement.
                   </p>
                   
-                  {/* 5. Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <Link href="/contact" className="btn-primary text-center w-full sm:w-auto !bg-[#111111] !text-white !py-3.5 lg:!py-5">Request Quote</Link>
-                    <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-bold !py-3.5 lg:!py-5">Material Details</Link>
+                    <Link href="/products" className="btn-outline text-center w-full sm:w-auto !border-[#111111] !text-[#111111] !font-medium !py-3.5 lg:!py-5">Material Details</Link>
                   </div>
                 </div>
               </div>
@@ -84,8 +80,8 @@ export default function Home() {
                   { label: "Material ID", val: "Raw white quartz lumps" }
                 ].map((spec, i) => (
                   <div key={i} className="border-l-2 border-black pl-6 py-1">
-                    <span className="text-[0.6rem] font-black uppercase text-gray-500 block mb-1">{spec.label}</span>
-                    <span className="text-sm font-bold text-[#111111]">{spec.val}</span>
+                    <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-1">{spec.label}</span>
+                    <span className="text-sm font-medium text-[#111111]">{spec.val}</span>
                   </div>
                 ))}
               </div>
@@ -143,7 +139,7 @@ export default function Home() {
                 <p className="text-sm text-[#111111] font-medium max-w-sm leading-relaxed mb-8">{item.desc}</p>
                 <div className="mt-auto pt-6 border-t border-black/5 flex flex-col">
                   <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest mb-1">Primary Use</span>
-                  <span className="text-[0.65rem] font-bold uppercase text-black">{item.use}</span>
+                  <span className="text-[0.65rem] font-medium uppercase text-black">{item.use}</span>
                 </div>
               </div>
               
