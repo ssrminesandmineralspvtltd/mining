@@ -12,14 +12,14 @@ export default function Home() {
       {/* Structural Background Grid */}
       <div className="fixed inset-0 technical-grid opacity-[0.1] lg:opacity-[0.4] pointer-events-none z-0"></div>
 
-      {/* Hero Section - Maximum Authenticity */}
+      {/* Hero Section */}
       <section className="relative flex flex-col pt-24 pb-14 lg:pt-32 lg:pb-20 z-10 min-h-fit lg:min-h-screen lg:justify-center">
         <div className="container-wide">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-16 items-start lg:items-center">
             
-            {/* Hero Image - REAL Material Visual First */}
+            {/* Hero Image - Optimized Mobile Height */}
             <div className="order-1 lg:order-2 lg:col-span-5 relative mt-4 lg:mt-0">
-              <div className="relative aspect-[16/10] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
+              <div className="relative aspect-[16/8.5] lg:aspect-square overflow-hidden rounded-xl border-2 lg:border-4 border-[#E6E6E6] bg-white shadow-xl">
                 <Image 
                   src="/images/lumps.png" 
                   alt="Authentic Raw White Quartz Lumps" 
@@ -35,13 +35,13 @@ export default function Home() {
               <div className="space-y-6 lg:space-y-10">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-px bg-black"></div>
-                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">SSR Mines and Minerals Pvt Ltd</span>
+                  <span className="text-[0.65rem] lg:text-[0.7rem] uppercase font-bold tracking-[0.4em] text-black">Raw White Quartz Supply</span>
                 </div>
                 <h1 className="text-[2.25rem] md:text-5xl lg:text-[6.5rem] leading-[1.1] lg:leading-[1] font-bold text-[#111111] tracking-tight">
                   Raw White <br className="hidden md:block" /> Quartz Lumps
                 </h1>
                 <div className="flex flex-col md:flex-row gap-6 lg:gap-12 items-start md:items-center">
-                  <p className="text-base lg:text-lg text-[#111111] font-bold max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
+                  <p className="text-base lg:text-lg text-[#111111] font-medium max-w-sm leading-relaxed border-l-4 border-black pl-6 lg:pl-8">
                     Supplying raw white quartz lumps for industrial buyers and bulk procurement.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
@@ -65,7 +65,7 @@ export default function Home() {
               <div>
                 <span className="text-label mb-4 block">Material Details</span>
                 <h2 className="h-section text-[#111111] mb-6">Industrial Grade <br/>White Quartz Lumps</h2>
-                <p className="text-[#111111] font-bold leading-relaxed max-w-lg">
+                <p className="text-[#111111] font-medium leading-relaxed max-w-lg">
                   Direct sourcing of raw white quartz lumps for industrial manufacturing chains. Bulk supply inquiries welcome.
                 </p>
               </div>
@@ -102,7 +102,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Industrial Applications - Clean Technical Cards */}
+      {/* Industrial Applications - Material Accents */}
       <section className="py-[72px] px-5 lg:py-40 lg:px-0 bg-white overflow-hidden" id="applications">
         <div className="container-wide mb-12 lg:mb-24">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
@@ -110,7 +110,7 @@ export default function Home() {
               <span className="text-label mb-4 lg:mb-6 block">Supply Alignment</span>
               <h2 className="h-section text-[#111111]">Industrial <br/>Supply Applications</h2>
             </div>
-            <p className="text-sm text-[#111111] font-bold max-w-xs leading-relaxed italic border-l-4 border-black pl-6">
+            <p className="text-sm text-[#111111] font-medium max-w-xs leading-relaxed italic border-l-4 border-black pl-6">
               "Serving industrial buyers across glass, ceramic, and mineral-based applications."
             </p>
           </div>
@@ -127,13 +127,16 @@ export default function Home() {
               key={idx} 
               className={`${item.span} bg-white relative group border-x border-b border-[#E6E6E6] lg:border-none rounded-b-xl lg:rounded-none overflow-hidden first:border-t first:rounded-t-xl`}
             >
-              <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full bg-white">
+              {/* Subtle Quartz Accent Pattern */}
+              <div className="absolute inset-0 opacity-[0.03] technical-grid pointer-events-none"></div>
+              
+              <div className="p-8 lg:p-16 relative z-10 flex flex-col h-full bg-white/80 border-l-2 border-transparent group-hover:border-black transition-all duration-500">
                 <div className="flex justify-between items-center mb-10">
                    <span className="text-[0.6rem] font-bold uppercase tracking-widest text-gray-400">Sector 0{idx + 1}</span>
                    <div className="w-8 h-px bg-black/10"></div>
                 </div>
                 <h3 className="text-xl lg:text-2xl font-bold uppercase tracking-tight mb-4 lg:mb-6 text-[#111111]">{item.title}</h3>
-                <p className="text-sm text-[#111111] font-bold max-w-sm leading-relaxed mb-8">{item.desc}</p>
+                <p className="text-sm text-[#111111] font-medium max-w-sm leading-relaxed mb-8">{item.desc}</p>
                 <div className="mt-auto pt-6 border-t border-black/5 flex flex-col">
                   <span className="text-[0.5rem] font-black text-gray-500 uppercase tracking-widest mb-1">Primary Use</span>
                   <span className="text-[0.65rem] font-bold uppercase text-black">{item.use}</span>
@@ -163,7 +166,7 @@ export default function Home() {
                   <span className="text-[0.6rem] font-bold text-black">0{i + 1}</span>
                   <h4 className="text-sm font-bold uppercase tracking-widest text-[#111111]">{block.title}</h4>
                 </div>
-                <p className="text-sm text-[#111111] leading-relaxed pl-10 font-bold">{block.desc}</p>
+                <p className="text-sm text-[#111111] leading-relaxed pl-10 font-medium">{block.desc}</p>
               </div>
             ))}
           </div>
