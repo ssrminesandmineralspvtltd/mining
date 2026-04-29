@@ -15,8 +15,6 @@ const WhatsAppPill = () => {
       </div>
       <span className="text-[0.7rem] font-black uppercase tracking-widest text-[#1A1A1A] hidden md:block">Industrial Inquiry</span>
       
-      {/* Mobile Badge Only */}
-      <div className="absolute -top-1 -right-1 w-3 h-3 bg-blue-600 rounded-full md:hidden"></div>
     </a>
   );
 };
