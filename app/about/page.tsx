@@ -18,7 +18,7 @@ const AboutPage = () => {
             <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-gray-400 mb-4 block">Our Company</span>
             <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">About SSR Mining <br/>& Minerals</h1>
             <p className="text-lg text-gray-500 leading-relaxed">
-              SSR Mining & Minerals Private Limited is a dedicated B2B supplier specializing in the sourcing and supply of premium raw white quartz lumps. We serve as a reliable partner to industrial manufacturers who demand consistent mineral purity.
+              SSR Mining & Minerals Private Limited is a dedicated B2B supplier specializing in the sourcing and supply of premium raw white Quartz, Mica, and Feldspar. We serve as a reliable partner to industrial manufacturers who demand consistent mineral purity.
             </p>
           </motion.div>
         </div>
@@ -29,7 +29,7 @@ const AboutPage = () => {
         <div className="max-w-[1440px] mx-auto px-[5%] grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="relative aspect-square">
             <Image 
-              src="/images/hero.png" 
+              src="/images/quarry_mining.png" 
               alt="Mining Excellence" 
               fill 
               className="object-cover rounded-[8px]"
@@ -42,7 +42,7 @@ const AboutPage = () => {
               <div>
                 <h4 className="text-sm font-bold uppercase tracking-widest mb-3">Material Integrity</h4>
                 <p className="text-gray-500 leading-relaxed">
-                  We prioritize the natural purity of our quartz. Our selection process ensures that only the brightest white lumps are sourced for our industrial partners.
+                  We prioritize the natural purity of our minerals. Our selection process ensures that only the brightest white Quartz, Mica, and Feldspar are sourced for our industrial partners.
                 </p>
               </div>
               <div>

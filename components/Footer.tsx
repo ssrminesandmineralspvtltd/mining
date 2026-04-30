@@ -17,7 +17,7 @@ const Footer = () => {
               <span className="logo-subtext">MINES AND MINERALS PVT LTD</span>
             </Link>
             <p className="text-sm text-gray-500 leading-relaxed mb-8 border-l border-black/10 pl-6">
-              Direct quarry-source supplier of raw white quartz lumps. Serving industrial buyers across glass, ceramic, and mineral-based applications.
+              Direct quarry-source supplier of raw white Quartz, Mica, and Feldspar. Serving industrial buyers across glass, ceramic, and mineral-based applications.
             </p>
             <div className="text-[0.6rem] font-bold text-gray-500 uppercase tracking-widest">
               Industrial Mineral Supplier / Logistics Integrated
@@ -37,20 +37,42 @@ const Footer = () => {
 
           {/* Details */}
           <div className="lg:col-span-3">
-            <h4 className="text-[0.7rem] font-black uppercase tracking-[0.3em] mb-10 text-gray-400">Contact Details</h4>
+            <h4 className="text-[0.7rem] font-black uppercase tracking-[0.3em] mb-10 text-gray-400">Business Details</h4>
             <div className="space-y-8">
               <div>
                 <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-2">Corporate Office</span>
-                <p className="text-sm text-gray-500 leading-relaxed font-bold">
+                <p className="text-xs text-gray-500 leading-relaxed font-bold mb-4">
                   Plot No: 88(A), Flat No: 216,<br/>
                   Ushodaya Towers, Shapurnagar,<br/>
                   Phase-1, IDA-Jeedimetla, Hyderabad - 500 055
                 </p>
+                
+                <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-2 mt-6">MDL Address (Khammam)</span>
+                <p className="text-xs text-gray-500 leading-relaxed font-bold mb-4">
+                  Sy no:- 595/61, o/e:- 0.810 (Ha),<br/>
+                  Butchi Reddy palem (village), Near Mamnoor,<br/>
+                  yerrupalem (Mandal), Khammam (Dist), Telangana.
+                </p>
+
+                <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-2 mt-6">MDL Address (Krishna)</span>
+                <p className="text-xs text-gray-500 leading-relaxed font-bold">
+                  Block no:-1, H.no :-1-209/A, Sy. No:- 100/3,<br/>
+                  Yakamuru Village, Near Vuyyuru, Thotlavallur (M.D),<br/>
+                  Krishna Dist-521165, Andhra Pradesh.
+                </p>
               </div>
+
+              <div>
+                <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-2">GST Compliance</span>
+                <p className="text-[0.65rem] font-bold text-gray-500 tracking-wider">
+                  37ABPCS6980C1ZT<br/>
+                  36ABPCS6980C1ZV
+                </p>
+              </div>
+
               <div>
                 <span className="text-[0.6rem] font-black uppercase text-gray-400 block mb-2">Technical Support</span>
                 <a href="mailto:ssrminesandmineralspvtltd@gmail.com" className="text-sm font-bold hover:underline">ssrminesandmineralspvtltd@gmail.com</a>
-
                 <p className="text-sm font-bold">+91 9885134569</p>
               </div>
             </div>

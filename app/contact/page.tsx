@@ -28,7 +28,7 @@ const ContactPage = () => {
             <span className="text-[0.7rem] uppercase font-bold tracking-[0.3em] text-gray-400 mb-4 block">Get in Touch</span>
             <h1 className="text-5xl md:text-6xl font-light tracking-tight mb-8">Industrial Inquiries</h1>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto leading-relaxed">
-              Connect directly with our quarry-sourced supply team for bulk inquiries, pricing, and technical data.
+              Connect directly with our quarry-sourced supply team for bulk inquiries on Quartz, Mica, and Feldspar.
             </p>
           </motion.div>
         </div>
@@ -48,12 +48,38 @@ const ContactPage = () => {
                 </div>
                 <div>
                   <h4 className="text-sm font-bold uppercase tracking-widest mb-2">Office Address</h4>
-                  <p className="text-gray-500 leading-relaxed">
+                  <p className="text-gray-500 leading-relaxed mb-6">
                     SSR Mines and Minerals Pvt Ltd<br/>
                     Plot No: 88(A), Flat No: 216, Ushodaya Towers,<br/>
                     Shapurnagar, Phase-1, IDA-Jeedimetla,<br/>
                     Hyderabad - 500 055, Telangana
                   </p>
+                  
+                  <div className="space-y-6">
+                    <div>
+                      <h4 className="text-[0.6rem] font-black uppercase tracking-widest text-gray-400 mb-1">MDL Address (Khammam)</h4>
+                      <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                        Sy no:- 595/61, o/e:- 0.810 (Ha),<br/>
+                        Butchi Reddy palem (village), Near Mamnoor,<br/>
+                        yerrupalem (Mandal), Khammam (Dist), Telangana.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="text-[0.6rem] font-black uppercase tracking-widest text-gray-400 mb-1">MDL Address (Krishna)</h4>
+                      <p className="text-sm text-gray-500 leading-relaxed font-medium">
+                        Block no:-1, H.no :-1-209/A, Sy. No:- 100/3,<br/>
+                        Yakamuru Village, Near Vuyyuru, Thotlavallur (M.D),<br/>
+                        Krishna Dist-521165, Andhra Pradesh.
+                      </p>
+                    </div>
+                    <div className="pt-4">
+                      <h4 className="text-[0.6rem] font-black uppercase tracking-widest text-gray-400 mb-1">GST Compliance</h4>
+                      <p className="text-sm font-bold text-[#1A1A1A]">
+                        37ABPCS6980C1ZT<br/>
+                        36ABPCS6980C1ZV
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -119,7 +145,7 @@ const ContactPage = () => {
 
               <div className="mb-10">
                 <label className="text-[0.7rem] font-bold uppercase tracking-widest text-gray-400 block mb-3">Requirement / Message</label>
-                <textarea required rows={5} className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors resize-none" placeholder="Describe your lump grade and volume requirements..."></textarea>
+                <textarea required rows={5} className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors resize-none" placeholder="Describe your Quartz, Mica, or Feldspar grade and volume requirements..."></textarea>
               </div>
 
               <button 
