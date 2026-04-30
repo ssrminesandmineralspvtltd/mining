@@ -6,13 +6,37 @@ import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 const ContactPage = () => {
   const [formState, setFormState] = useState<'idle' | 'submitting' | 'sent'>('idle');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setFormState('submitting');
-    setTimeout(() => {
-      setFormState('sent');
-      setTimeout(() => setFormState('idle'), 3000);
-    }, 1500);
+
+    const formData = new FormData(e.currentTarget);
+    const data = {
+      name: formData.get('name'),
+      company: formData.get('company'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+      message: formData.get('message'),
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setFormState('sent');
+        setTimeout(() => setFormState('idle'), 5000);
+      } else {
+        throw new Error('Failed to send');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Failed to send inquiry. Please try again or contact us directly via email.');
+      setFormState('idle');
+    }
   };
 
   return (
@@ -124,28 +148,28 @@ const ContactPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <label className="text-[0.7rem] font-bold uppercase tracking-widest text-gray-400 block mb-3">Full Name</label>
-                  <input required type="text" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="John Doe" />
+                  <input name="name" required type="text" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="John Doe" />
                 </div>
                 <div>
                   <label className="text-[0.7rem] font-bold uppercase tracking-widest text-gray-400 block mb-3">Company Name</label>
-                  <input required type="text" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="Industrial Corp Ltd." />
+                  <input name="company" required type="text" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="Industrial Corp Ltd." />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div>
                   <label className="text-[0.7rem] font-bold uppercase tracking-widest text-gray-400 block mb-3">Corporate Email</label>
-                  <input required type="email" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="john@company.com" />
+                  <input name="email" required type="email" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="john@company.com" />
                 </div>
                 <div>
                   <label className="text-[0.7rem] font-bold uppercase tracking-widest text-gray-400 block mb-3">Phone Number</label>
-                  <input required type="tel" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="+91 ..." />
+                  <input name="phone" required type="tel" className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors" placeholder="+91 ..." />
                 </div>
               </div>
 
               <div className="mb-10">
                 <label className="text-[0.7rem] font-bold uppercase tracking-widest text-gray-400 block mb-3">Requirement / Message</label>
-                <textarea required rows={5} className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors resize-none" placeholder="Describe your Quartz, Mica, or Feldspar grade and volume requirements..."></textarea>
+                <textarea name="message" required rows={5} className="w-full bg-[#F8F9FA] border border-[#E6E6E6] rounded-[4px] px-4 py-3 text-sm focus:outline-none focus:border-black transition-colors resize-none" placeholder="Describe your Quartz, Mica, or Feldspar grade and volume requirements..."></textarea>
               </div>
 
               <button 
