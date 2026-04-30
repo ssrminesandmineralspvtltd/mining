@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const Footer = () => {
   return (
-    <footer className="bg-white border-t border-[#E6E6E6] pt-32 pb-16 relative overflow-hidden z-10">
+    <footer id="footer" className="bg-white border-t border-[#E6E6E6] pt-32 pb-16 relative overflow-hidden z-10">
       {/* Background Marker */}
       <div className="absolute bottom-0 right-0 technical-grid w-1/4 h-1/2 opacity-[0.2] -z-10"></div>
       
