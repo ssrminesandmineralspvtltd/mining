@@ -28,10 +28,10 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: `"SSR Mining Website" <${process.env.EMAIL_USER}>`,
+      from: `"SSR Mining Inquiry" <${process.env.EMAIL_USER}>`,
       to: 'ssrminesandmineralspvtltd@gmail.com',
-      replyTo: email, // This lets the company reply directly to the customer
-      subject: `New Industrial Inquiry from ${name} (${company})`,
+      replyTo: email, 
+      subject: `[INQUIRY] ${name} - SSR Mining`,
       text: `
         New inquiry received from SSR Mining Website:
         
