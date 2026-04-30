@@ -70,24 +70,26 @@ export async function POST(req: Request) {
                 <div class="section-title">Inquiry From</div>
                 <div class="field-value">${name}<br/><span style="color: #666; font-size: 14px;">${company}</span></div>
                 
-                <div style="display: flex; gap: 40px; margin-bottom: 24px;">
-                  <div style="flex: 1;">
-                    <div class="section-title">Email Address</div>
-                    <div class="field-value" style="margin-bottom: 0;">${email}</div>
-                  </div>
-                  <div style="flex: 1;">
-                    <div class="section-title">Phone Number</div>
-                    <div class="field-value" style="margin-bottom: 0;">${phone}</div>
-                  </div>
-                </div>
+                <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom: 24px;">
+                  <tr>
+                    <td width="50%" valign="top">
+                      <div class="section-title">Email Address</div>
+                      <div class="field-value" style="margin-bottom: 0;">${email}</div>
+                    </td>
+                    <td width="50%" valign="top">
+                      <div class="section-title">Phone Number</div>
+                      <div class="field-value" style="margin-bottom: 0;">${phone}</div>
+                    </td>
+                  </tr>
+                </table>
 
                 <div class="section-title">Requirement Details</div>
                 <div class="message-box">
                   <p style="margin: 0; white-space: pre-wrap; color: #333;">${message}</p>
                 </div>
 
-                <div style="text-align: center;">
-                  <a href="mailto:${email}" class="btn">Reply to Inquiry</a>
+                <div style="text-align: center; margin-top: 30px;">
+                  <a href="mailto:${email}" style="display: inline-block; padding: 16px 32px; background-color: #1a1a1a; color: #ffffff; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em;">Reply to Inquiry</a>
                 </div>
               </div>
               <div class="footer">
